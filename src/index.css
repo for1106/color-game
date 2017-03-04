@@ -1,0 +1,126 @@
+/*!
+ * 小米
+ */
+
+[class*="col-"] {
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+html, body, #root, .container {
+	height: 100%;
+	font-family: Microsoft JhengHei;
+	font-size: 110%;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+}
+
+/************************/
+
+.status {
+	flex: 0 0 auto;
+	background: #eee;
+}
+
+.status > div {
+	text-align: center;
+}
+
+.status label {
+	display: block;
+	margin: 0;
+}
+
+/************************/
+
+.answer {
+	flex: 0 0 50px;
+	background: #eee;
+}
+
+.answer > div {
+	text-align: center;
+	line-height: 50px;
+	border-radius: 25px;
+}
+
+/************************/
+
+.question {
+	flex: 1 1 auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.mask:nth-last-child(n+6){
+	display: none;
+}
+
+.block {
+	border-radius: 10px;
+	font-size: 200%;
+	filter: brightness(75%);
+	line-height: 1.5em;
+	padding: 0 0.8em;
+	position: relative;
+}
+
+.active .block {
+	font-size: 400%;
+	filter: initial;
+}
+
+.combo {
+	/*position: absolute;
+	background: url(/img/combo.png);
+	background-size: 100%;
+	color: #fff;
+	text-shadow: 1px 1px 5px #000,1px 1px 5px #000,1px 1px 5px #000,1px 1px 5px #000;
+	font-size: 30px;
+	width: 100px;
+	height: 87px;
+	left: 50%;
+	bottom: 50%;
+	padding: 20px 0 0 60px;
+	animation: combo 0.2s ease-out 2 alternate;*/
+	display: none;
+}
+
+.icon {
+	position: absolute;
+	left: -20%;
+}
+
+@keyframes combo
+{
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(2);
+	}
+}
+
+@media (min-width: 351px ) and ( max-width: 768px) {
+	body {
+		font-size: 100%;
+	}
+	.question {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 350px) {
+	body {
+		font-size: 77%;
+	}
+
+	.question {
+		flex-direction: column;
+	}
+}
